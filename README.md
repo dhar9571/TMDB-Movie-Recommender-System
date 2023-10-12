@@ -5,13 +5,13 @@ Link to the Live Server of my Recommender System:
 https://tmdb-content-based-movie-recommender-system-dharmendra.streamlit.app/
 
 ## Objective:
-I developed a TMDB Content-Based Movie Recommender System by following a series of steps, utilizing various tools and techniques. The primary objective of this project was to provide users with personalized movie recommendations based on their input, enhancing their movie-watching experience.
+Developed a TMDB Content-Based Movie Recommender System utilizing various tools and techniques. The primary objective of this project was to provide users with personalized movie recommendations based on their input, enhancing their movie-watching experience.
 
 ## Steps and Methods Used:
 
-Obtained Datasets: I downloaded two distinct datasets from Kaggle - Movies and Credits.
+Obtained Datasets: Downloaded two distinct datasets from Kaggle - Movies and Credits.
 
-Data Integration: I merged these datasets using pandas, utilizing the title column as the common key.
+Data Integration: Merged these datasets using pandas, utilizing the title column as the common key.
 
 Data Cleaning: Unnecessary columns such as budget, homepage, and more were removed to streamline the dataset.
 
