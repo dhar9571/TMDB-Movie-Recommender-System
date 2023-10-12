@@ -10,10 +10,17 @@ def fetch_poster(movie_id):
     return "https://image.tmdb.org/t/p/w500/" + data['poster_path']
 
 # Load the movies DataFrame
-movies = pickle.load(open('movies.pkl', 'rb'))
+#movies = pickle.load(open('movies.pkl', 'rb'))
 
 # Load the similarity data
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+#similarity = pickle.load(open('similarity.pkl', 'rb'))
+
+# Load the object with decompression
+with gzip.open('movies.joblib.gz', 'rb') as file:
+    movies = joblib.load(file)
+
+with gzip.open('similarity.joblib.gz', 'rb') as file1:
+    similarity = joblib.load(file1)
 
 def recommend(name, num_recommendations=10):
     index = movies[movies['title'] == name].index[0]
