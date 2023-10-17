@@ -5,7 +5,8 @@ Link to the Live Server of my Recommender System:
 https://tmdb-content-based-movie-recommender-system-dharmendra.streamlit.app/
 
 ## Objective:
-Developed a TMDB Content-Based Movie Recommender System utilizing various tools and techniques. The primary objective of this project was to provide users with personalized movie recommendations based on their input, enhancing their movie-watching experience.
+
+Develope a TMDB Content-Based Movie Recommender System utilizing various tools and techniques. The primary objective of this project was to provide users with personalized movie recommendations based on their input, enhancing their movie-watching experience.
 
 ## Steps and Methods Used:
 
@@ -34,6 +35,10 @@ User-Friendly Interface: Developed a user interface using Streamlit to input use
 Web Scraping: Utilized the TMDB API to fetch movie posters for display.
 
 Model Deployment: Saved essential objects as pickle files for deployment and hosted the recommender system on Streamlit Cloud.
+
+## Challanges Faced:
+
+The biggest challange was to add the similarity file to Github repository to deploy the model on Streamlit cloud due to its large size of 187mb. Also tried the same using LFS using command line, but still facing an issue due to Github LFS object memory limit. In order to solve the issue, reduced the size of the dataset by removing half of the total records as it was the only possible way to achieve the goal.
 
 ## Business Impact:
 
