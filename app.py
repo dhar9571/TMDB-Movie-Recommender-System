@@ -43,7 +43,7 @@ st.title('Movie Recommender System')
 movies_list = movies['title'].tolist()
 
 # Create a selection box for movie selection
-movie_name = st.selectbox('Select a movie you like', movies_list)
+movie_name = st.selectbox('Select a movie you like', sorted(movies_list))
 
 # Style for the "Recommend" button (green with black text)
 button_style = """
