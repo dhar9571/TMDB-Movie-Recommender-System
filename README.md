@@ -2,7 +2,7 @@
 
 Link to the Live Server of my Recommender System:
 
-https://tmdb-content-based-movie-recommender-system-dharmendra.streamlit.app/
+https://tmdb-recommender-system-dharmendra.streamlit.app/
 
 ## Objective:
 
