@@ -1,5 +1,5 @@
-numpy==1.25.2
-pandas==1.4.4
-Requests==2.31.0
-streamlit==1.25.0
-joblib==1.2.0
+numpy
+pandas
+Requests
+streamlit
+joblib

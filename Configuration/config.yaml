@@ -1,0 +1,8 @@
+application:
+  debug: True 
+  host: '10.32.0.125' 
+  port: 64088
+
+log_setting:
+  loglevel: 1  #1=DEBUG, 2=ERROR         DEBUG > ERROR
+  log_to_console: True

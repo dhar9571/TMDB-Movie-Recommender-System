@@ -1,16 +1,23 @@
-# This is a sample Python script.
+import sys
+from flask import Flask
+from utility.log_handler import Logger
+import traceback
+from controller.controller import controller, settings
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Define app
+app = Flask(__name__, template_folder="templates")
 
+# Creating blueprint
+app.register_blueprint(controller, url_prefix="")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    try:
+        # Run the Flask app
+        app.run(
+            debug=settings['application']['debug'], 
+            host=settings['application']['host'], 
+            port=settings['application']['port']
+        )
+    except Exception as e:
+        # Log any runtime errors
+        print(f"Exception occurred while running the app: {traceback.format_exc()}")

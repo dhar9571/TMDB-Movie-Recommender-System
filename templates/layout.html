@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend Me</title>
+
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</head>
+<body>
+    <!-- Title -->
+    <header>MovieQuest: Explore & Enjoy</header>
+
+    <!-- Dropdown and Recommend Button -->
+    <div class="container">
+        <form id="recommendForm">
+            <label for="movieSelect">Select a movie you like:</label>
+            <select id="movieSelect" name="movie">
+                <!-- Options will be populated dynamically -->
+            </select>
+            <button type="button" onclick="recommendMovies()">Recommend</button>
+        </form>
+    </div>
+
+    <!-- Side Pain -->
+    <div class="side-pane" id="sidePane">
+        <div class="side-pane-content">
+            <h2>About MovieQuest</h2>
+            <p id="overview">Explore MovieQuest: Unlock the Perfect Movie Match! 
+                <br> 
+                Your go-to platform for personalized movie recommendations.
+                <br>
+                <br>           
+            </p>
+            <p id="description">
+                This Hybrid Movie Recommendation System is built using a dataset of 5,000 movies from TMDB, 
+                designed to provide tailored recommendations by analyzing and identifying content similar 
+                to the selected movie. 
+            </p>
+            <!-- Add more information here later -->
+        </div>
+    </div>
+
+    <!-- Moving Text in the Bottom -->
+    <div class="moving-text">Welcome to my Movie Recommendation Engine</div>
+
+</body>
+</html>
