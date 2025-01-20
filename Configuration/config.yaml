@@ -1,8 +1,9 @@
 application:
   debug: True 
-  host: '10.32.0.125' 
+  host: 'localhost' 
   port: 64088
 
 log_setting:
   loglevel: 1  #1=DEBUG, 2=ERROR         DEBUG > ERROR
   log_to_console: True
+  logpath: 'D:\\Downloads\\git_projects\\commonlearning\\TMDB-Movie-Recommender-System\\'

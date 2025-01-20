@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/tmdb_bg.webp'); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/tmdb_bg.webp'); 
     background-size: cover; /* Ensures the image covers the entire screen */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image on the screen */
@@ -14,7 +14,7 @@ body {
 header {
     background-color: #020202;
     text-shadow: 0 0 20px #f3e3e4, 0 0 5px #f3e3e4, 0 0 2px #f3e3e4;
-    opacity: 0.8;
+    opacity: 0.85;
     color: rgb(255, 255, 255);
     padding: 20px;
     font-size: 25px;

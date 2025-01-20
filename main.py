@@ -10,6 +10,9 @@ app = Flask(__name__, template_folder="templates")
 # Creating blueprint
 app.register_blueprint(controller, url_prefix="")
 
+# Logger object
+logger = Logger.setup_logger()
+
 if __name__ == "__main__":
     try:
         # Run the Flask app
@@ -20,4 +23,4 @@ if __name__ == "__main__":
         )
     except Exception as e:
         # Log any runtime errors
-        print(f"Exception occurred while running the app: {traceback.format_exc()}")
+        logger.debug(f"Exception occurred while running the app: {traceback.format_exc()}")
