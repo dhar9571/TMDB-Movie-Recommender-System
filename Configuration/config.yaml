@@ -1,0 +1,18 @@
+application:
+  debug: True 
+  host: 'localhost' 
+  port: 64088
+
+log_setting:
+  loglevel: 1  #1=DEBUG, 2=ERROR         DEBUG > ERROR
+  log_to_console: True
+  # logpath: 'D:\\Downloads\\git_projects\\commonlearning\\TMDB-Movie-Recommender-System\\'
+  logpath: 'C:\\Users\\dk957\\OneDrive\\Desktop\\movie_recommender_system\\'
+
+
+paths:
+  movies: "C:\\Users\\dk957\\OneDrive\\Desktop\\movie_recommender_system\\data\\csv\\movies.csv"
+  movies_obj: "C:\\Users\\dk957\\OneDrive\\Desktop\\movie_recommender_system\\data\\objs\\movies.joblib.gz"
+  credits: "C:\\Users\\dk957\\OneDrive\\Desktop\\movie_recommender_system\\data\\csv\\credits.csv"
+  credits_obj: "C:\\Users\\dk957\\OneDrive\\Desktop\\movie_recommender_system\\data\\objs\\similarity.joblib.gz"
+  

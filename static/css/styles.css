@@ -1,0 +1,210 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/tmdb_bg_2.jpg'); 
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image on the screen */
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Title, Dropdown and Button */
+
+header {
+    background-color: #020202;
+    text-shadow: 0 0 20px #f3e3e4, 0 0 5px #f3e3e4, 0 0 2px #f3e3e4;
+    opacity: 0.85;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 15px; /* Set a reasonable height */
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    border-top-color: #00ffcc; /* Neon blue-green */
+    border-bottom-color: #ff0066; /* Neon pink */
+    animation: spin 0.8s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    background-color: #d10913e0;
+    color: white;
+    border: white;
+    padding: 15px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center text */
+    align-items: center; /* Vertically center text */
+    width: 10%;
+}
+
+button:hover {
+    background-color: #f40612;
+}
+
+/* Moving Text in the bottom */
+
+.moving-text {
+    position: fixed; /* Sticks to the bottom of the screen */
+    bottom: 10px;
+    left: 100%; /* Start off-screen */
+    font-size: 25px;
+    font-weight: bold;
+    color: #d1cece;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff3e3e, 0 0 20px #ff3e3e;
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: flicker 1.0s infinite, move 10s linear infinite;
+    z-index: 1000;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes move {
+    from { left: 100%; }
+    to { left: -100%; }
+}
+
+
+/* The hidden sliding pane */
+.side-pane {
+    position: fixed;
+    top: 0;
+    left: -200px; /* Initially hidden off-screen */
+    width: 200px;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.9;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Ensure no text spills out */
+    transition: left 0.3s ease; /* Smooth sliding animation */
+    z-index: 1000;
+}
+
+/* Show the pane when hovered */
+.side-pane:hover {
+    left: 0; /* Fully reveal the pane */
+}
+
+/* The content inside the pane */
+.side-pane-content {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0; /* Make the content invisible initially */
+    transform: translateX(-50px); /* Shift the text slightly left */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in and slide-in */
+}
+
+/* Make content visible when the pane is hovered */
+.side-pane:hover .side-pane-content {
+    opacity: 1; /* Make the text fully visible */
+    transform: translateX(0); /* Reset the position of the text */
+}
+
+.side-pane h2 {
+    color: #e50914; /* Set a distinct color for the title */
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.side-pane p {
+    color: #ffffff; /* Set a different color for the text */
+    line-height: 1.5; /* Improve readability */
+    font-size: 15px;
+}
+
+/* Styling for the overview paragraph */
+.side-pane p#overview {
+    color: #ffffff; /* A distinct color for the overview text */
+    font-size: 12px; /* Slightly larger font size for emphasis */
+    /* font-weight: bold; Make it stand out */
+    font-style: italic;
+}
+
+/* Styling for the description paragraph */
+.side-pane p#description {
+    color: #ffffff; /* Default text color */
+    font-size: 18px; /* Slightly smaller font for descriptive text */
+    font-style: italic; /* Add an elegant touch */
+}
+
+
+/* Styling the main select box */
+.select2-container--default .select2-selection--single {
+    background-color: #000 !important; /* Black background */
+    border: 1px solid #d10913 !important; /* Red border */
+    color: white !important; /* White text */
+    height: 45px !important; /* Adjust height */
+    padding: 10px !important; /* Adjust padding */
+    display: flex !important;
+    align-items: center !important; /* Vertically center text */
+}
+
+/* Styling the dropdown options */
+.select2-container--default .select2-results__option {
+    background-color: #000 !important; /* Black background */
+    color: white !important; /* White text */
+}
+
+/* Styling the selected option */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white !important; /* White text */
+}
+
+/* Change the dropdown arrow color */
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: white transparent transparent transparent !important; /* White arrow */
+}
+
