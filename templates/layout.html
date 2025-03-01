@@ -6,19 +6,38 @@
     <title>Recommend Me</title>
 
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+<<<<<<< HEAD
+=======
+    <link href="{{ url_for('static', filename='css/select2.min.css') }}" rel="stylesheet" />
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/select2.min.js') }}"></script>
+>>>>>>> master
     <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
 </head>
 <body>
     <!-- Title -->
+<<<<<<< HEAD
     <header>MovieQuest: Explore & Enjoy</header>
+=======
+    <header>MovieQuest: Explore & Enjoy</header>  
+    
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>    
+>>>>>>> master
 
     <!-- Dropdown and Recommend Button -->
     <div class="container">
         <form id="recommendForm">
+<<<<<<< HEAD
             <label for="movieSelect">Select a movie you like:</label>
             <select id="movieSelect" name="movie">
                 <!-- Options will be populated dynamically -->
+=======
+            <select id="movieSelect" name="movie">
+                <option value="" selected disabled></option>
+>>>>>>> master
             </select>
             <button type="button" onclick="recommendMovies()">Recommend</button>
         </form>
@@ -44,7 +63,11 @@
     </div>
 
     <!-- Moving Text in the Bottom -->
+<<<<<<< HEAD
     <div class="moving-text">Welcome to my Movie Recommendation Engine</div>
+=======
+    <div class="moving-text">Discover movies you’ll love! 🎬✨</div>
+>>>>>>> master
 
 </body>
 </html>
